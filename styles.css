@@ -1,0 +1,117 @@
+/* Reset Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: black;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Stars Background */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+canvas {
+    display: block;
+}
+
+/* Content Styling */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    animation: fadeIn 3s ease-in-out;
+}
+
+#countdown {
+    font-size: 2.5em;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+#customMessage {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Cake Design */
+#cake {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cake {
+    position: relative;
+    width: 150px;
+    height: 100px;
+    background: #fff5d1;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.cake-top {
+    width: 130px;
+    height: 20px;
+    background: #f7c8a0;
+    border-radius: 10px;
+    margin-top: -10px;
+    box-shadow: inset 0 -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cake-layer {
+    width: 140px;
+    height: 20px;
+    background: #ffedd5;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.candle {
+    width: 10px;
+    height: 50px;
+    background: #f4a261;
+    position: absolute;
+    top: -30px;
+    border-radius: 5px;
+}
+
+.flame {
+    width: 15px;
+    height: 25px;
+    background: radial-gradient(circle, #ffda77 0%, #ff9e00 70%);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { transform: translateX(-50%) scale(1); }
+    100% { transform: translateX(-50%) scale(1.2); }
+}
